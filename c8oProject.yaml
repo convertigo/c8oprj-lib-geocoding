@@ -1,0 +1,20 @@
+↑convertigo: 7.9.0.m006
+↓lib_Geocoding [core.Project]: 
+  comment: Convertigo Mobile builder Project
+  corsOrigin: =Origin
+  ↓bingMapsApi [connectors.HttpConnector]: 🗏 connectors/bingMapsApi.yaml
+  ↓googleMapsApi [connectors.HttpConnector]: 🗏 connectors/googleMapsApi.yaml
+  ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓getGeocodeBingMaps [sequences.GenericSequence]: 🗏 sequences/getGeocodeBingMaps.yaml
+  ↓getGeocodeGoogleMaps [sequences.GenericSequence]: 🗏 sequences/getGeocodeGoogleMaps.yaml
+  ↓MobileBuilderTemplate [references.ProjectSchemaReference]: 
+    comment: mobile builder template
+    projectName: mobilebuilder_tpl_7_9_0=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_7_9_0.zip
+  ↓MobileApplication [core.MobileApplication]: 
+    comment: Describes the mobile application global properties
+    splashRemoveMode: beforeUpdate
+    ↓Android [mobileplatforms.Android]: 
+      comment: Android platform
+    ↓iOS [mobileplatforms.IOs]: 
+      comment: iOS platform
+    ↓Application [mobile.components.ApplicationComponent]: 🗏 mobileApplication.yaml

@@ -1,0 +1,83 @@
+↓DivGeoCoding [mobile.components.UIDynamicElement-1608651712226]: 
+  beanData: '{"ionBean":"DivTag"}'
+  tagName: div
+  ↓FormItem1 [mobile.components.UIDynamicElement-1608651712229]: 
+    beanData: '{"ionBean":"FormItem"}'
+    isEnabled: false
+    tagName: ion-item
+    ↓Label1 [mobile.components.UIDynamicElement-1608651712232]: 
+      beanData: '{"ionBean":"Label"}'
+      tagName: ion-label
+      ↓Text [mobile.components.UIText-1608651712235]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Geocode
+    ↓CheckBox [mobile.components.UIDynamicElement-1608651712238]: 
+      beanData: '{"ionBean":"CheckBox"}'
+      tagName: ion-checkbox
+  ↓FormItem [mobile.components.UIDynamicElement-1608651712241]: 
+    beanData: '{"ionBean":"FormItem"}'
+    tagName: ion-item
+    ↓Label [mobile.components.UIDynamicElement-1608651712244]: 
+      beanData: '{"ionBean":"Label","Floating":"plain:floating"}'
+      tagName: ion-label
+      ↓Coordinates [mobile.components.UIText-1608651712247]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Coordinates
+    ↓TextInput [mobile.components.UIDynamicElement-1608651712250]: 
+      beanData: '{"ionBean":"Input","Value":"script:(this.global?.adresse !=undefined) ? this.global?.adresse?.FormattedAddress : router.sharedObject?.geoCoding?.lat + '','' + router.sharedObject?.geoCoding?.long"}'
+      tagName: ion-input
+↓PageEvent [mobile.components.UIPageEvent-1608651712253]: 
+  ↓getLocation [mobile.components.UICustomAction-1608651712256]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+            		navigator.geolocation.getCurrentPosition((position) => {
+            				var lat = position.coords.latitude
+            				var long = position.coords.longitude
+            				var coords = {
+            					lat: lat,
+            					long: long
+            				}
+            				//		this.altitude = position.coords.atltitude;
+            				resolve(coords);
+            		});
+            '
+    ↓SetGlobal [mobile.components.UIDynamicAction-1608651712259]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:geoCoding",
+         "Value": "script:out"
+        }'
+    ↓IfElse [mobile.components.UIDynamicIf-1608651712262]: 
+      beanData: '{"ionBean":"IfElseAction","condition":"script:navigator.onLine"}'
+      ↓CallSequence [mobile.components.UIDynamicAction-1608651712265]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_Geocoding.getGeocodeBingMaps"}'
+        ↓point [mobile.components.UIControlVariable-1608651712268]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.router.sharedObject?.geoCoding?.lat + ',' + this.router.sharedObject?.geoCoding?.long
+        ↓includeEntityTypes [mobile.components.UIControlVariable-1608651712271]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Address,Postcode1,CountryRegion
+        ↓If [mobile.components.UIDynamicAction-1608651712274]: 
+          beanData: '{"ionBean":"IfAction"}'
+          ↓adresse [mobile.components.UIDynamicAction-1608651712277]: 
+            beanData: |
+              '{
+               "ionBean": "SetGlobalAction",
+               "Property": "plain:adresse",
+               "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_ExtendedComponents\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1608651712265},{\"priority\":1608651712256},{\"priority\":1608651712262}],\"path\":\"?.out?.Address\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+              }'

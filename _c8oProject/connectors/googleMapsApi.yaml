@@ -1,0 +1,13 @@
+baseDir: /maps/api/geocode/
+https: true
+port: 443
+server: maps.googleapis.com
+↓getGeocodeGoogleMaps [transactions.XmlHttpTransaction]: 
+  ↑default: true
+  subDir: json
+  ↓latlng [variables.RequestableHttpVariable-1608651684949]: 
+    httpName: latlng
+    value: 
+  ↓key [variables.RequestableHttpVariable-1608651684952]: 
+    httpName: key
+    value: 
