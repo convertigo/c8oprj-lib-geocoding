@@ -38,13 +38,6 @@ __lib_Geocoding__ provides sequences you can call in your projects
 
 Sequence  | Action
 ------| ------
-getGeocodeBingMaps | Return an object with human-readable address from coordinates. <br>Takes 3 variables :<br>- point : The coordinates of the location that you want to reverse geocode. A point is specified by a latitude and a longitude.<br >- includeEntityTypes : Specifies the entity types that you want to return in the response. Only the types you specify will be returned. If the point cannot be mapped to the entity types you specify, no location information is returned in the response.<br >- key : Your API key from symbol.
+getGeocodeBingMaps | Return an object with human-readable address from coordinates. <br>Takes 3 variables :<br>- **point** : The coordinates of the location that you want to reverse geocode. A point is specified by a latitude and a longitude.<br >- **includeEntityTypes** : Specifies the entity types that you want to return in the response. Only the types you specify will be returned. If the point cannot be mapped to the entity types you specify, no location information is returned in the response.<br >- **key** : Your API key from symbol.
 
 These sequences will only work if you performed a OAuth Authentication to AzureAD first. To help you with this, the library provides a Shared action you can use in your Apps. 
-
-## Sample Application
-
-You will find in this project a sample application using the Microsoft Excel Sheet Library, use this as a reference and tutorial about using the library. This demonstrates :
-- Use of the **Authenticate** Shared Action
-- use of the **SheetGetRange** Sequence
-
