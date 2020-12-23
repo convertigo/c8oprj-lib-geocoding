@@ -60,8 +60,36 @@ title: First page
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:Open app in your browser (otherwise values will be null)
+  ↓H1 [mobile.components.UIDynamicElement-1608721117984]: 
+    beanData: '{"ionBean":"Heading1"}'
+    tagName: h1
+    ↓Text [mobile.components.UIText-1608721126560]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:showAddress = true
   ↓UseSharedComponent [mobile.components.UIUseShared-1608714631216]: 
     sharedcomponent: lib_Geocoding.MobileApplication.Application.geoCoding
+    ↓showAddress [mobile.components.UIControlVariable-1608719632966]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+  ↓H11 [mobile.components.UIDynamicElement-1608721186346]: 
+    beanData: '{"ionBean":"Heading1"}'
+    tagName: h1
+    ↓Text [mobile.components.UIText-1608721186349]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:showAddress = false
+  ↓UseSharedComponent1 [mobile.components.UIUseShared-1608721210969]: 
+    sharedcomponent: lib_Geocoding.MobileApplication.Application.geoCoding
+    ↓showAddress [mobile.components.UIControlVariable-1608721210972]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:false
 ↓Footer [mobile.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

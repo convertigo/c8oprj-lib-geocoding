@@ -1,21 +1,6 @@
 ↓DivGeoCoding [mobile.components.UIDynamicElement-1608651712226]: 
   beanData: '{"ionBean":"DivTag"}'
   tagName: div
-  ↓FormItem1 [mobile.components.UIDynamicElement-1608651712229]: 
-    beanData: '{"ionBean":"FormItem"}'
-    isEnabled: false
-    tagName: ion-item
-    ↓Label1 [mobile.components.UIDynamicElement-1608651712232]: 
-      beanData: '{"ionBean":"Label"}'
-      tagName: ion-label
-      ↓Text [mobile.components.UIText-1608651712235]: 
-        textValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:Geocode
-    ↓CheckBox [mobile.components.UIDynamicElement-1608651712238]: 
-      beanData: '{"ionBean":"CheckBox"}'
-      tagName: ion-checkbox
   ↓FormItem [mobile.components.UIDynamicElement-1608651712241]: 
     beanData: '{"ionBean":"FormItem"}'
     tagName: ion-item
@@ -28,7 +13,7 @@
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Coordinates
     ↓TextInput [mobile.components.UIDynamicElement-1608651712250]: 
-      beanData: '{"ionBean":"Input","Value":"script:(this.global?.address !=undefined) ? this.global?.address?.FormattedAddress : router.sharedObject?.geoCoding?.lat + '','' + router.sharedObject?.geoCoding?.long"}'
+      beanData: '{"ionBean":"Input","Value":"script:(this.global?.address !=undefined && params1608651712223.showAddress) ? this.global?.address?.FormattedAddress : router.sharedObject?.geoCoding?.lat + '','' + router.sharedObject?.geoCoding?.long"}'
       tagName: ion-input
 ↓PageEvent [mobile.components.UIPageEvent-1608651712253]: 
   ↓getLocation [mobile.components.UICustomAction-1608651712256]: 
@@ -81,3 +66,5 @@
                "Property": "plain:address",
                "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_ExtendedComponents\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1608651712265},{\"priority\":1608651712256},{\"priority\":1608651712262}],\"path\":\"?.out?.Address\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
               }'
+↓showAddress [mobile.components.UICompVariable-1608719512003]: 
+  value: true

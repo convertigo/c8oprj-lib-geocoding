@@ -27,7 +27,6 @@ This library is based on Bing Maps location API, to have this:
 
 __lib_Geocoding__ needs some symbols to be configured. You configure them through the Web Console: **https://&lt;your site&gt;.convertigo.net/admin**, hit the ___symbols___ button to get to the symbol configuration page.
 
-
 Symbol  | value
 ------| ------
 lib_Geocoding.BingsMapsApiKey | Your **API key** value you copied from previous step
@@ -38,9 +37,18 @@ __lib_Geocoding__ provides sequences you can call in your projects
 
 Sequence  | Action
 ------| ------
-getGeocode | Return an object with human-readable address from coordinates. <br>Takes 3 variables :<br>- **point** : The coordinates of the location that you want to reverse geocode. A point is specified by a latitude and a longitude.<br >- **includeEntityTypes** : Specifies the entity types that you want to return in the response. Only the types you specify will be returned. If the point cannot be mapped to the entity types you specify, no location information is returned in the response.<br >
+getGeocode | Return an object with human-readable address from coordinates. <br>Takes 3 variables :<br> - **point** : The coordinates of the location that you want to reverse geocode. A point is specified by a latitude and a longitude.<br >- **includeEntityTypes** : Specifies the entity types that you want to return in the response. Only the types you specify will be returned. If the point cannot be mapped to the entity types you specify, no location information is returned in the response.<br >
 
 ## Sample Application
 
+* Allow access to your location from your browser when asked
+
 You will find in this project a sample application using the geocoding library, use this as a reference and tutorial about using the library. This demonstrates :
 - Use of the **getGeocode** Sequence
+- Use of the **showAdress** parameter
+
+## Shared component parameters
+
+| Attribute        | Type           | Default | Description  |
+| ------------- |-------------| -----|------------|
+| showAddress      | Boolean | true    | Uses reverse geocoding to get a human-readable address |
