@@ -38,7 +38,7 @@ __lib_Geocoding__ provides sequences you can call in your projects
 
 Sequence  | Action
 ------| ------
-getGeocode | Return an object with human-readable address from coordinates. <br>Takes 3 variables :<br>- **point** : The coordinates of the location that you want to reverse geocode. A point is specified by a latitude and a longitude.<br >- **includeEntityTypes** : Specifies the entity types that you want to return in the response. Only the types you specify will be returned. If the point cannot be mapped to the entity types you specify, no location information is returned in the response.<br >- **key** : Your API key from symbol.
+getGeocode | Return an object with human-readable address from coordinates. <br>Takes 3 variables :<br>- **point** : The coordinates of the location that you want to reverse geocode. A point is specified by a latitude and a longitude.<br >- **includeEntityTypes** : Specifies the entity types that you want to return in the response. Only the types you specify will be returned. If the point cannot be mapped to the entity types you specify, no location information is returned in the response.<br >
 
 ## Sample Application
 
