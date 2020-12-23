@@ -31,7 +31,7 @@ title: First page
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:My First App
+            - MobileSmartSourceType: plain:lib_Geocoding sample
     ↓Button [mobile.components.UIDynamicElement-1491634442029]: 
       beanData: '{"ionBean":"Button","MenuMode":"plain:menuToggle"}'
       comment: A button to toggle the menu
@@ -52,6 +52,16 @@ title: First page
   beanData: '{"ionBean":"Content"}'
   comment: Page content
   tagName: ion-content
+  ↓H3 [mobile.components.UIDynamicElement-1608714574710]: 
+    beanData: '{"ionBean":"Heading3"}'
+    tagName: h3
+    ↓Text [mobile.components.UIText-1608714581332]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:Open app in your browser (otherwise values will be null)
+  ↓UseSharedComponent [mobile.components.UIUseShared-1608714631216]: 
+    sharedcomponent: lib_Geocoding.MobileApplication.Application.geoCoding
 ↓Footer [mobile.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

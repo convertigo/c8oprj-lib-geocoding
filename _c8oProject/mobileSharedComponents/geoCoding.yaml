@@ -28,7 +28,7 @@
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Coordinates
     ↓TextInput [mobile.components.UIDynamicElement-1608651712250]: 
-      beanData: '{"ionBean":"Input","Value":"script:(this.global?.adresse !=undefined) ? this.global?.adresse?.FormattedAddress : router.sharedObject?.geoCoding?.lat + '','' + router.sharedObject?.geoCoding?.long"}'
+      beanData: '{"ionBean":"Input","Value":"script:(this.global?.address !=undefined) ? this.global?.address?.FormattedAddress : router.sharedObject?.geoCoding?.lat + '','' + router.sharedObject?.geoCoding?.long"}'
       tagName: ion-input
 ↓PageEvent [mobile.components.UIPageEvent-1608651712253]: 
   ↓getLocation [mobile.components.UICustomAction-1608651712256]: 
@@ -59,7 +59,7 @@
     ↓IfElse [mobile.components.UIDynamicIf-1608651712262]: 
       beanData: '{"ionBean":"IfElseAction","condition":"script:navigator.onLine"}'
       ↓CallSequence [mobile.components.UIDynamicAction-1608651712265]: 
-        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_Geocoding.getGeocodeBingMaps"}'
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_Geocoding.getGeocode"}'
         ↓point [mobile.components.UIControlVariable-1608651712268]: 
           comment: new variable
           varValue: 
@@ -78,6 +78,6 @@
             beanData: |
               '{
                "ionBean": "SetGlobalAction",
-               "Property": "plain:adresse",
+               "Property": "plain:address",
                "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_ExtendedComponents\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1608651712265},{\"priority\":1608651712256},{\"priority\":1608651712262}],\"path\":\"?.out?.Address\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
               }'
