@@ -25,6 +25,8 @@ componentScriptContent:
         
 tplProjectName: mobilebuilder_tpl_7_9_0
 ↓Menu [mobile.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
+↓getCurrentPosition [mobile.components.UIActionStack-1609932131682]: 🗏 mobileSharedActions/getCurrentPosition.yaml
+↓getLocationByLatAndLong [mobile.components.UIActionStack-1609935843608]: 🗏 mobileSharedActions/getLocationByLatAndLong.yaml
 ↓geoCoding [mobile.components.UISharedComponent-1608651712223]: 🗏 mobileSharedComponents/geoCoding.yaml
 ↓Page [mobile.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
 ↓Theme [mobile.components.UITheme-1491635018260]: 

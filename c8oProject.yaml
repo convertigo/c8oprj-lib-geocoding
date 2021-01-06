@@ -2,6 +2,7 @@
 ↓lib_Geocoding [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
+  version: 1.0.0
   ↓bingMapsApi [connectors.HttpConnector]: 🗏 connectors/bingMapsApi.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓getGeocode [sequences.GenericSequence]: 🗏 sequences/getGeocode.yaml

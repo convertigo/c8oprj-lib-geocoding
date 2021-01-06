@@ -3,7 +3,7 @@
   ↓point [variables.StepVariable-1608651694097]: 
   ↓includeEntityTypes [variables.StepVariable-1608651694100]: 
   ↓key [variables.StepVariable-1608651694103]: 
-    value: ${lib_Geocoding.BingsMapsApiKey}
+    value: ${lib_Geocoding.BingsMapsApiKey.secret}
 ↓Copy [steps.XMLCopyStep-1608651694106]: 
   sourceDefinition: 
     - xmlizable: 

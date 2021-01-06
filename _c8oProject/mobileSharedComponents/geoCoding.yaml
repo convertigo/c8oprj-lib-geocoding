@@ -13,58 +13,91 @@
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Coordinates
     ↓TextInput [mobile.components.UIDynamicElement-1608651712250]: 
-      beanData: '{"ionBean":"Input","Value":"script:(this.global?.address !=undefined && params1608651712223.showAddress) ? this.global?.address?.FormattedAddress : router.sharedObject?.geoCoding?.lat + '','' + router.sharedObject?.geoCoding?.long"}'
+      beanData: '{"ionBean":"Input","Value":"script:(this.global?.address !=undefined && params1608651712223.showAddress) ? this.global?.address?.FormattedAddress : router.sharedObject?.geoCoding?.latitude + '','' + router.sharedObject?.geoCoding?.longitude"}'
       tagName: ion-input
 ↓PageEvent [mobile.components.UIPageEvent-1608651712253]: 
-  ↓getLocation [mobile.components.UICustomAction-1608651712256]: 
-    actionValue: 
-      - xmlizable: 
-        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-        - com.twinsoft.convertigo.beans.common.FormatedContent: 
-          →: |
-            '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-            		navigator.geolocation.getCurrentPosition((position) => {
-            				var lat = position.coords.latitude
-            				var long = position.coords.longitude
-            				var coords = {
-            					lat: lat,
-            					long: long
-            				}
-            				//		this.altitude = position.coords.atltitude;
-            				resolve(coords);
-            		});
-            '
-    ↓SetGlobal [mobile.components.UIDynamicAction-1608651712259]: 
+  ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1609932476367]: 
+    beanData: '{"ionBean":"InvokeAction"}'
+    stack: lib_Geocoding.MobileApplication.Application.getCurrentPosition
+    ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1609936800976]: 
+      beanData: '{"ionBean":"InvokeAction"}'
+      stack: lib_Geocoding.MobileApplication.Application.getLocationByLatAndLong
+      ↓latitude [mobile.components.UIControlVariable-1609936813656]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:parent.out.latitude
+      ↓longitude [mobile.components.UIControlVariable-1609936813658]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:parent.out.longitude
+      ↓Address [mobile.components.UIControlVariable-1609936813660]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:true
+      ↓Postcode1 [mobile.components.UIControlVariable-1609936813662]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:true
+      ↓CountryRegion [mobile.components.UIControlVariable-1609936813664]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:true
+      ↓Neighborhood [mobile.components.UIControlVariable-1609936813666]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:false
+      ↓PopulatedPlace [mobile.components.UIControlVariable-1609936813668]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:false
+      ↓AdminDivision1 [mobile.components.UIControlVariable-1609936813670]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:true
+      ↓AdminDivision2 [mobile.components.UIControlVariable-1609936813672]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:false
+      ↓adresse [mobile.components.UIDynamicAction-1609937272602]: 
+        beanData: |
+          '{
+           "ionBean": "SetGlobalAction",
+           "Property": "plain:address",
+           "Value": "script:out?.Address"
+          }'
+    ↓SetGlobal [mobile.components.UIDynamicAction-1609937240032]: 
       beanData: |
         '{
          "ionBean": "SetGlobalAction",
          "Property": "plain:geoCoding",
          "Value": "script:out"
         }'
-    ↓IfElse [mobile.components.UIDynamicIf-1608651712262]: 
-      beanData: '{"ionBean":"IfElseAction","condition":"script:navigator.onLine"}'
-      ↓CallSequence [mobile.components.UIDynamicAction-1608651712265]: 
-        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_Geocoding.getGeocode"}'
-        ↓point [mobile.components.UIControlVariable-1608651712268]: 
-          comment: new variable
-          varValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-              - MobileSmartSourceType: script:this.router.sharedObject?.geoCoding?.lat + ',' + this.router.sharedObject?.geoCoding?.long
-        ↓includeEntityTypes [mobile.components.UIControlVariable-1608651712271]: 
-          comment: new variable
-          varValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Address,Postcode1,CountryRegion
-        ↓If [mobile.components.UIDynamicAction-1608651712274]: 
-          beanData: '{"ionBean":"IfAction"}'
-          ↓adresse [mobile.components.UIDynamicAction-1608651712277]: 
-            beanData: |
-              '{
-               "ionBean": "SetGlobalAction",
-               "Property": "plain:address",
-               "Value": "source:{\"filter\":\"Action\",\"project\":\"lib_ExtendedComponents\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1608651712265},{\"priority\":1608651712256},{\"priority\":1608651712262}],\"path\":\"?.out?.Address\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
-              }'
+    ↓maximumAge [mobile.components.UIControlVariable-1609938495171]: 
+      comment: 'Is a positive long value indicating the maximum age in milliseconds of a possible cached position that is acceptable to return. If set to 0, it means that the device cannot use a cached position and must attempt to retrieve the real current position. If set to Infinity the device must return a cached position regardless of its age. Default: 0.'
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:0
+    ↓timeout [mobile.components.UIControlVariable-1609938495173]: 
+      comment: Is a positive long value representing the maximum length of time (in milliseconds) the device is allowed to take in order to return a position. The default value is Infinity, meaning that getCurrentPosition() won't return until the position is available.
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:Infinity
+    ↓enableHighAccuracy [mobile.components.UIControlVariable-1609938495175]: 
+      comment: 'Is a Boolean that indicates the application would like to receive the best possible results. If true and if the device is able to provide a more accurate position, it will do so. Note that this can result in slower response times or increased power consumption (with a GPS chip on a mobile device for example). On the other hand, if false, the device can take the liberty to save resources by responding more quickly and/or using less power. Default: true.'
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
 ↓showAddress [mobile.components.UICompVariable-1608719512003]: 
   value: true

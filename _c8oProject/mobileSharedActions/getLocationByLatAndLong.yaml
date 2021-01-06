@@ -1,0 +1,53 @@
+↓latitude [mobile.components.UIStackVariable-1609935880366]: 
+↓longitude [mobile.components.UIStackVariable-1609935903999]: 
+↓ComputeParameters [mobile.components.UICustomAction-1609936402455]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          		let includeEntityTypes = "";
+          		const expectedEntityTypes = ["Address", "Neighborhood", "PopulatedPlace", "Postcode1", "AdminDivision1", "AdminDivision2", "CountryRegion"];
+          		expectedEntityTypes
+          		.forEach((entityTypes)=>{
+          			if(vars.params[entityTypes] === true){
+          				includeEntityTypes += ","+entityTypes;
+          			}	
+          		});
+          		//remove first comma if exists
+          		includeEntityTypes = includeEntityTypes.substring(1);
+          		resolve(includeEntityTypes);
+          
+  ↓CallSequence [mobile.components.UIDynamicAction-1609935867569]: 
+    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_Geocoding.getGeocode"}'
+    ↓point [mobile.components.UIControlVariable-1609935867572]: 
+      comment: new variable
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:params.latitude + ',' + params.longitude
+    ↓includeEntityTypes [mobile.components.UIControlVariable-1609935867575]: 
+      comment: new variable
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:parent.out
+  ↓params [mobile.components.UIControlVariable-1609937092219]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params
+↓Address [mobile.components.UIStackVariable-1609936191699]: 
+  value: true
+↓Postcode1 [mobile.components.UIStackVariable-1609936257787]: 
+  value: true
+↓CountryRegion [mobile.components.UIStackVariable-1609936306784]: 
+  value: true
+↓Neighborhood [mobile.components.UIStackVariable-1609936309027]: 
+  value: false
+↓PopulatedPlace [mobile.components.UIStackVariable-1609936311264]: 
+  value: false
+↓AdminDivision1 [mobile.components.UIStackVariable-1609936313432]: 
+  value: true
+↓AdminDivision2 [mobile.components.UIStackVariable-1609936372576]: 
+  value: false
