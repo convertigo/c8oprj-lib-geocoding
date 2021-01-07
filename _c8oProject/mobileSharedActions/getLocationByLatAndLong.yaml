@@ -19,7 +19,12 @@
           		resolve(includeEntityTypes);
           
   ↓CallSequence [mobile.components.UIDynamicAction-1609935867569]: 
-    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_Geocoding.getGeocode"}'
+    beanData: |
+      '{
+       "ionBean": "CallSequenceAction",
+       "requestable": "plain:lib_Geocoding.getGeocode",
+       "noLoading": "plain:true"
+      }'
     ↓point [mobile.components.UIControlVariable-1609935867572]: 
       comment: new variable
       varValue: 
@@ -32,6 +37,16 @@
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: script:parent.out
+    ↓latitude [mobile.components.UIControlVariable-1610013459125]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:params.latitude
+    ↓longitude [mobile.components.UIControlVariable-1610013465302]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:params.longitude
   ↓params [mobile.components.UIControlVariable-1609937092219]: 
     varValue: 
       - xmlizable: 
