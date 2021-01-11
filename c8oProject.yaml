@@ -2,7 +2,7 @@
 ↓lib_Geocoding [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
-  version: 1.0.1
+  version: 1.0.2
   ↓bingMapsApi [connectors.HttpConnector]: 🗏 connectors/bingMapsApi.yaml
   ↓geo_api_gouv_fr [connectors.HttpConnector]: 🗏 connectors/geo_api_gouv_fr.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml

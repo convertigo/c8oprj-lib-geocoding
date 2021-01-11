@@ -6,7 +6,17 @@
         →: |
           '		const options = {maximumAge: vars.params.maximumAge, timeout: vars.params.timeout, enableHighAccuracy: vars.params.enableHighAccuracy};
           		navigator.geolocation.getCurrentPosition((position) => {
-          				resolve(position.coords);
+          				let results = {
+          					"latitude": position.coords.latitude,
+          					"longitude": position.coords.longitude,
+          					"altitude": position.coords.altitude,
+          					"accuracy": position.coords.accuracy,
+          					"altitudeAccuracy": position.coords.altitudeAccuracy,
+          					"heading":position.coords.heading,
+          					"speed":position.coords.speed
+          					
+          				};
+          				resolve(results);
           			},
           			(error) => {
           				resolve(error);

@@ -15,6 +15,48 @@
     ↓TextInput [mobile.components.UIDynamicElement-1608651712250]: 
       beanData: '{"ionBean":"Input","Value":"script:(this.global?.address !=undefined && params1608651712223.showAddress) ? this.global?.address?.FormattedAddress : router.sharedObject?.geoCoding?.latitude + '','' + router.sharedObject?.geoCoding?.longitude"}'
       tagName: ion-input
+  ↓Directive [mobile.components.UIControlDirective-1610189760132]: 
+    directiveName: If
+    directiveSource: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.global.bouding != undefined
+    ↓Div [mobile.components.UIDynamicElement-1610189746587]: 
+      beanData: '{"ionBean":"DivTag"}'
+      tagName: div
+      ↓Text [mobile.components.UIText-1610189752503]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:'topLeft :'
+      ↓Text2 [mobile.components.UIText-1610189946294]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'script:''latitude: '' + this.global.bouding.topLeft?.lat'
+      ↓Text21 [mobile.components.UIText-1610190002086]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'script:''longitude:  '' + this.global.bouding.topLeft?.lon'
+    ↓Div1 [mobile.components.UIDynamicElement-1610189923817]: 
+      beanData: '{"ionBean":"DivTag"}'
+      tagName: div
+      ↓Text [mobile.components.UIText-1610190029899]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:'bottomRight:'
+      ↓Text2 [mobile.components.UIText-1610190029902]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'script:''latitude: '' + this.global.bouding.bottomRight?.lat'
+      ↓Text21 [mobile.components.UIText-1610190029905]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'script:''longitude:  '' + this.global.bouding.bottomRight?.lon'
 ↓PageEvent [mobile.components.UIPageEvent-1608651712253]: 
   ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1609932476367]: 
     beanData: '{"ionBean":"InvokeAction"}'
@@ -99,5 +141,30 @@
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: script:true
+    ↓InvokeSharedAction1 [mobile.components.UIDynamicInvoke-1610189605121]: 
+      beanData: '{"ionBean":"InvokeAction"}'
+      stack: lib_Geocoding.MobileApplication.Application.getBoundingBoxFromPosition
+      ↓latitude [mobile.components.UIControlVariable-1610189619357]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:parent.out.latitude
+      ↓longitude [mobile.components.UIControlVariable-1610189619359]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:parent.out.longitude
+      ↓margin [mobile.components.UIControlVariable-1610189619361]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:100
+      ↓SetGlobal [mobile.components.UIDynamicAction-1610189712142]: 
+        beanData: |
+          '{
+           "ionBean": "SetGlobalAction",
+           "Property": "plain:bouding",
+           "Value": "script:parent.out"
+          }'
 ↓showAddress [mobile.components.UICompVariable-1608719512003]: 
   value: true
