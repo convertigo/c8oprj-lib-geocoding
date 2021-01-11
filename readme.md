@@ -16,12 +16,15 @@ This is the geocoding library for Convertigo platform when network is reachable.
 
 ## How to get your API Key
 
-This library is based on Bing Maps location API, to have this:
+This library is based on severals locations API, to have this:
 
-* Go to https://www.bingmapsportal.com/ and sign in with your Microsoft account, if you don't have one, create one through the process
-* Go to "My Account" and click on "My Keys"
-* Fill out the form and click "Create" and get your API key details
-* Copy your API key
+* [geo.api.gouv.fr](https://geo.api.gouv.fr/)
+  * No needs any api key, (bust just working to find French locations )
+* [Bing Maps](https://www.bingmapsportal.com/)
+  * Go to https://www.bingmapsportal.com/ and sign in with your Microsoft account, if you don't have one, create one through the process
+  * Go to "My Account" and click on "My Keys"
+  * Fill out the form and click "Create" and get your API key details
+  * Copy your API key
 
 ## Configuring Convertigo Symbols
 
@@ -29,7 +32,8 @@ __lib_Geocoding__ needs some symbols to be configured. You configure them throug
 
 Symbol  | value
 ------| ------
-lib_Geocoding.BingsMapsApiKey.secret | Your **API key** value you copied from previous step
+lib_Geocoding.provider | Can be "geo_api_gouv_fr" if you wants to use [geo.api.gouv.fr](https://geo.api.gouv.fr/) or "bings_map" if you wants to use [Bing Maps](https://www.bingmapsportal.com/)
+lib_Geocoding.BingsMapsApiKey.secret | Your **API key** value you copied from previous step if you choose [Bing Maps](https://www.bingmapsportal.com/)
 
 ## Sequences
 

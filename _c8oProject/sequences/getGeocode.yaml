@@ -11,7 +11,7 @@
         - java.lang.String: 
           - ↑value: 1610013266870
         - java.lang.String: 
-          - ↑value: .[text() = 'geo_api_gouv_fr']
+          - ↑value: .[text() = 'geo_api_gouv_fr' or text() = '']
   ↓jThen [steps.ThenStep-1610013346570]: 
     ↓Call_Transaction [steps.TransactionStep-1610013402304]: 
       sourceTransaction: lib_Geocoding.geo_api_gouv_fr.adresse_reverse
