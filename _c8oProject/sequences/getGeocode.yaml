@@ -45,7 +45,7 @@
             - java.lang.String: 
               - ↑value: 1610013402304
             - java.lang.String: 
-              - ↑value: ./document/object/features/object/properties/context/text()
+              - ↑value: ./document/object/features/object[1]/properties/context/text()
     ↓Address [steps.XMLComplexStep-1610015595754]: 
       nodeName: Address
       ↓AddressLine [steps.XMLElementStep-1610015681588]: 
@@ -57,7 +57,7 @@
               - java.lang.String: 
                 - ↑value: 1610013402304
               - java.lang.String: 
-                - ↑value: ./document/object/features/object/properties/name/text()
+                - ↑value: ./document/object/features/object[1]/properties/name/text()
       ↓AddressLine1 [steps.XMLElementStep-1610015868051]: 
         nodeName: AdminDistrict
         sourceDefinition: 
@@ -90,7 +90,7 @@
               - java.lang.String: 
                 - ↑value: 1610013402304
               - java.lang.String: 
-                - ↑value: ./document/object/features/object/properties/label/text()
+                - ↑value: ./document/object/features/object[1]/properties/label/text()
       ↓AdminDistrict2111 [steps.XMLElementStep-1610016115725]: 
         nodeName: Locality
         sourceDefinition: 
@@ -100,7 +100,7 @@
               - java.lang.String: 
                 - ↑value: 1610013402304
               - java.lang.String: 
-                - ↑value: ./document/object/features/object/properties/city/text()
+                - ↑value: ./document/object/features/object[1]/properties/city/text()
       ↓AdminDistrict21111 [steps.XMLElementStep-1610016131454]: 
         nodeName: PostalCode
         sourceDefinition: 
@@ -110,7 +110,7 @@
               - java.lang.String: 
                 - ↑value: 1610013402304
               - java.lang.String: 
-                - ↑value: ./document/object/features/object/properties/postcode/text()
+                - ↑value: ./document/object/features/object[1]/properties/postcode/text()
       ↓Intersection [steps.XMLComplexStep-1610016838395]: 
         nodeName: Intersection
         ↓Element [steps.XMLElementStep-1610016849758]: 

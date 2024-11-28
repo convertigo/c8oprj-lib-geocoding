@@ -8,6 +8,7 @@
       beanData: '{"ionBean":"Label","Floating":"plain:floating"}'
       tagName: ion-label
       ↓Coordinates [mobile.components.UIText-1608651712247]: 
+        i18n: true
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -25,16 +26,19 @@
       beanData: '{"ionBean":"DivTag"}'
       tagName: div
       ↓Text [mobile.components.UIText-1610189752503]: 
+        i18n: true
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: script:'topLeft :'
       ↓Text2 [mobile.components.UIText-1610189946294]: 
+        i18n: true
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: 'script:''latitude: '' + this.global.bouding.topLeft?.lat'
       ↓Text21 [mobile.components.UIText-1610190002086]: 
+        i18n: true
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -43,16 +47,19 @@
       beanData: '{"ionBean":"DivTag"}'
       tagName: div
       ↓Text [mobile.components.UIText-1610190029899]: 
+        i18n: true
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: script:'bottomRight:'
       ↓Text2 [mobile.components.UIText-1610190029902]: 
+        i18n: true
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: 'script:''latitude: '' + this.global.bouding.bottomRight?.lat'
       ↓Text21 [mobile.components.UIText-1610190029905]: 
+        i18n: true
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType

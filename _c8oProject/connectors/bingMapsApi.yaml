@@ -3,6 +3,7 @@ port: 443
 server: dev.virtualearth.net
 ↓getGeocode [transactions.XmlHttpTransaction]: 
   ↑default: true
+  accessibility: Public
   subDir: REST/v1/Locations/{point}
   ↓point [variables.RequestableHttpVariable-1608651684935]: 
   ↓o [variables.RequestableHttpVariable-1608651684938]: 

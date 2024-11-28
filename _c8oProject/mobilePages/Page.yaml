@@ -28,6 +28,7 @@ title: First page
       beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
       ↓Text [mobile.components.UIText-1491634275121]: 
+        i18n: true
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -56,6 +57,7 @@ title: First page
     beanData: '{"ionBean":"Heading3"}'
     tagName: h3
     ↓Text [mobile.components.UIText-1608714581332]: 
+      i18n: true
       textValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -64,6 +66,7 @@ title: First page
     beanData: '{"ionBean":"Heading1"}'
     tagName: h1
     ↓Text [mobile.components.UIText-1608721126560]: 
+      i18n: true
       textValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -79,6 +82,7 @@ title: First page
     beanData: '{"ionBean":"Heading1"}'
     tagName: h1
     ↓Text [mobile.components.UIText-1608721186349]: 
+      i18n: true
       textValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -104,6 +108,7 @@ title: First page
         beanData: '{"ionBean":"Button"}'
         tagName: button
         ↓Text [mobile.components.UIText-1491634340354]: 
+          i18n: true
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -115,6 +120,7 @@ title: First page
         beanData: '{"ionBean":"Button"}'
         tagName: button
         ↓Text [mobile.components.UIText-1491634383107]: 
+          i18n: true
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
