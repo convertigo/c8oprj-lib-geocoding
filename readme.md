@@ -34,6 +34,10 @@ Symbol  | value
 ------| ------
 lib_Geocoding.provider | Can be "geo_api_gouv_fr" if you wants to use [geo.api.gouv.fr](https://geo.api.gouv.fr/) or "bings_map" if you wants to use [Bing Maps](https://www.bingmapsportal.com/)
 lib_Geocoding.BingsMapsApiKey.secret | Your **API key** value you copied from previous step if you choose [Bing Maps](https://www.bingmapsportal.com/)
+lib_Geocoding.maxRequestsPerMinute | Optional. Maximum number of **getGeocode** calls per minute for the whole server. Default: 600
+lib_Geocoding.maxRequestsPerMinutePerSession | Optional. Maximum number of **getGeocode** calls per minute for one HTTP session. Default: 60
+
+When one of these limits is reached, **getGeocode** answers "Too many geocoding requests, try again later" until the current minute is over.
 
 ## Sequences
 
@@ -42,6 +46,16 @@ __lib_Geocoding__ provides sequences you can call in your projects
 Sequence  | Action
 ------| ------
 getGeocode | Return an object with human-readable address from coordinates. <br>Takes 3 variables :<br> - **point** : The coordinates of the location that you want to reverse geocode. A point is specified by a latitude and a longitude.<br >- **includeEntityTypes** : Specifies the entity types that you want to return in the response. Only the types you specify will be returned. If the point cannot be mapped to the entity types you specify, no location information is returned in the response.<br >
+
+### Coordinates accepted by getGeocode
+
+* **latitude** and **longitude** are decimal degrees written as plain numbers with a dot, for example `48.8566` and `2.3522` (an optional sign, up to 3 digits before the dot and up to 20 decimals).
+* The latitude must be between -90 and 90, the longitude between -180 and 180.
+* Any other value (empty, a comma as decimal separator, an exponent such as `1e-7`, both values in one field) is refused with "Invalid coordinates".
+
+### Response cache
+
+**getGeocode** responses are cached for 24 hours: the same coordinates get the cached address without a new call to the provider, and these cached answers do not count in the limits per minute. A change of `lib_Geocoding.provider` applies to coordinates that are not in the cache yet.
 
 ## Sample Application
 

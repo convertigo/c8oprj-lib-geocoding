@@ -1,4 +1,12 @@
+comment: |
+  Address of the given coordinates, used by the location field of the forms.
+  Latitude and longitude in decimal degrees, calls limited per minute (js/geocodeGuard.js), responses cached for a day.
+responseExpiryDate: absolute,86400
 ↓Input_variables [steps.InputVariablesStep-1610013627717]: 
+↓CheckRequest [steps.SimpleStep-1894094000001]: 
+  expression: |
+    include("js/geocodeGuard.js");
+    geocodeGuard.check(latitude, longitude, context);
 ↓Element [steps.XMLElementStep-1610013266870]: 
   nodeName: provider
   nodeText: ${lib_Geocoding.provider}
@@ -208,8 +216,6 @@
 ↓Test_Case [core.TestCase]: 
   ↓includeEntityTypes [variables.TestCaseVariable-1608651694125]: 
     value: Address,Postcode1,CountryRegion
-  ↓key [variables.TestCaseVariable-1608651694128]: 
-    value: AuDqlheb9lLo4YPP-abCkT53ZT8zkUWnNFRw0RE0yjnfXfrCp67l9pVJpenHi1A4
   ↓latitude [variables.TestCaseVariable-1610013779692]: 
     value: 48.722626299999995
   ↓longitude [variables.TestCaseVariable-1610013779694]: 
